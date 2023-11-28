@@ -1,15 +1,15 @@
-package com.ifma.transportadora.test;
+package main.java.com.ifma.locadora.test;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.ifma.transportadora.modelo.Cliente;
-import com.ifma.transportadora.repositorio.ClienteRepository;
+import main.java.com.ifma.locadora.modelo.Cliente;
+import main.java.com.ifma.locadora.repositorio.ClienteRepository;
 
 public class TesteCliente {
     public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("lab04_test");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("lab05_test");
         EntityManager em = emf.createEntityManager();
 
         // Teste para a entidade Cliente
@@ -17,8 +17,7 @@ public class TesteCliente {
         
         Cliente cliente = new Cliente();
         cliente.setNome("Josivaldo Leite");
-        cliente.setEndereco("Rua Dourada, 123");
-        cliente.setTelefone("(81)92536-4703");
+        
 
         clienteRepository.salvarCliente(cliente);
 
