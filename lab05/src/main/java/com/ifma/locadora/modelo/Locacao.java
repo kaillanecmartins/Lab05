@@ -1,4 +1,4 @@
-package main.java.com.ifma.locadora.modelo;
+package com.ifma.locadora.modelo;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -6,11 +6,12 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Collection;
+import java.math.BigDecimal;
 
 @Getter @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Locacao {
+public class Locacao implements EntidadeBase{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -23,4 +24,7 @@ public class Locacao {
     @ManyToOne
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
+
+    private BigDecimal valorTotal;
+
 }

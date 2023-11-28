@@ -1,4 +1,4 @@
-package main.java.com.ifma.locadora.modelo;
+package com.ifma.locadora.modelo;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Getter @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Cliente{
+public class Cliente implements EntidadeBase{
 
     @EqualsAndHashCode.Include
     @Id
@@ -21,10 +21,10 @@ public class Cliente{
     private String telefone;
     private String senha;
 
-    @OneToMany(mappedBy = "cliente_id")
+    @OneToMany(mappedBy = "cliente")
     private Collection<Locacao> locacoes;
 
-    @OneToMany(mappedBy = "cliente_id")
+    @OneToMany(mappedBy = "cliente")
     private Collection<UtilizacaoDoConsolePeloCliente> utilizacoes;
 
 }

@@ -1,17 +1,15 @@
-package main.java.com.ifma.locadora.modelo;
+package com.ifma.locadora.modelo;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
-import com.ifma.locadora.modelo.Cliente;
 import java.time.LocalDateTime;
-import java.util.Collection;
 
 @Getter @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class UtilizacaoDoConsolePeloCliente {
+public class UtilizacaoDoConsolePeloCliente implements EntidadeBase{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

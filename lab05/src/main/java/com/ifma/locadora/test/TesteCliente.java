@@ -1,11 +1,11 @@
-package main.java.com.ifma.locadora.test;
+package com.ifma.locadora.test;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import main.java.com.ifma.locadora.modelo.Cliente;
-import main.java.com.ifma.locadora.repositorio.ClienteRepository;
+import com.ifma.locadora.modelo.Cliente;
+import com.ifma.locadora.repositorio.ClienteRepository;
 
 public class TesteCliente {
     public static void main(String[] args) {
@@ -17,11 +17,14 @@ public class TesteCliente {
         
         Cliente cliente = new Cliente();
         cliente.setNome("Josivaldo Leite");
+        cliente.setEmail("josivaldo@example.com");
+        cliente.setTelefone("987654321");
+        cliente.setSenha("123senha");
         
 
-        clienteRepository.salvarCliente(cliente);
+        clienteRepository.salvaOuAtualiza(cliente);
 
-        Cliente clienteRecuperado = clienteRepository.buscarCliente(cliente.getCodigoCliente());
+        Cliente clienteRecuperado = clienteRepository.buscaPor(cliente.getId());
         System.out.println("Cliente Recuperado: " + clienteRecuperado.getNome());
 
         em.close();

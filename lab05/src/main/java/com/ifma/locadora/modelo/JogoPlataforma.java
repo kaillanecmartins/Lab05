@@ -1,4 +1,4 @@
-package main.java.com.ifma.locadora.modelo;
+package com.ifma.locadora.modelo;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -10,7 +10,7 @@ import java.util.Collection;
 @Getter @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class JogoPlataforma {
+public class JogoPlataforma implements EntidadeBase{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

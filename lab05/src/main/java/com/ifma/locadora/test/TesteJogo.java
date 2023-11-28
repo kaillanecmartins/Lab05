@@ -1,11 +1,11 @@
-package main.java.com.ifma.locadora.test;
+package com.ifma.locadora.test;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import main.java.com.ifma.locadora.repositorio.JogoRepository;
-import main.java.com.ifma.locadora.modelo.Jogo;
+import com.ifma.locadora.repositorio.JogoRepository;
+import com.ifma.locadora.modelo.Jogo;
 
 public class TesteJogo {
     public static void main(String[] args) {

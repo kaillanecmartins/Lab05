@@ -1,10 +1,8 @@
-package main.java.com.ifma.locadora.repositorio;
+package com.ifma.locadora.repositorio;
 
-import main.java.com.ifma.locadora.modelo.Jogo;
-import main.java.com.ifma.locadora.repositorio.DAOGenerico;
+import com.ifma.locadora.modelo.Jogo;
 import java.util.List;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
 
 public class JogoRepository {
     private final EntityManager manager;

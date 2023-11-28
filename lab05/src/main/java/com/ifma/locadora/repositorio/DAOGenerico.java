@@ -1,6 +1,6 @@
-package main.java.com.ifma.locadora.repositorio;
+package com.ifma.locadora.repositorio;
 
-import main.java.com.ifma.locadora.modelo.EntidadeBase;
+import com.ifma.locadora.modelo.EntidadeBase;
 import javax.persistence.EntityManager;
 import java.util.Objects;
 

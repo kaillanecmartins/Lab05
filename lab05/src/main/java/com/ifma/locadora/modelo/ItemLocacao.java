@@ -1,4 +1,4 @@
-package main.java.com.ifma.locadora.modelo;
+package com.ifma.locadora.modelo;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Getter @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class ItemLocacao {
+public class ItemLocacao implements EntidadeBase{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -22,5 +22,5 @@ public class ItemLocacao {
 
     @ManyToOne
     @JoinColumn(name = "jogodeplataforma_id")
-    private JogoDePlataforma jogoDePlataforma;
+    private JogoPlataforma jogoDePlataforma;
 }
